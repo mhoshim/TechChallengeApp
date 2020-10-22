@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: servian-conf
+data:
+  conf.toml: |-
+    "DbUser" = "postgres"
+    "DbPassword" = "pAssw0rd"
+    "DbName" = "app"
+    "DbPort" = "5432"
+    "DbHost" = "postgres"
+    "ListenHost" = "0.0.0.0"
+    "ListenPort" = "3000"

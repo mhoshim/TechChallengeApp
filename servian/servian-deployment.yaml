@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: servian
+  labels:
+    app: servian
+spec:
+  selector:
+    matchLabels:
+      app: servian
+  template:
+    metadata:
+      labels:
+        app: servian
+    spec:
+      containers:
+      - image: asia.gcr.io/nomadic-utility-292301/techchallengeapp:v3
+        name: servian
+        args: ['serve']
+        ports:
+        - containerPort: 3000
+          name: servian
+        resources:
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 200m
+        volumeMounts:
+          - name: servian
+            mountPath: /TechChallengeApp/conf.toml
+            subPath: conf.toml
+      volumes:
+        - name: servian
+          configMap:
+            name: servian-conf
