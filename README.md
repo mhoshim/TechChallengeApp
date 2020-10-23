@@ -13,8 +13,8 @@
 ## Build Kubernetes Cluster on GCP
 - find your GCP project id using the following command
   `$gcloud config get-value project`
-- run the file “./k8s.sh project_id region” #example: ./k8s.sh nonamed-utility-1234 asia-southeast1
+- run the file `./k8s.sh project_id region` #example: ./k8s.sh nonamed-utility-1234 asia-southeast1
 ## Start Deployment
-- run the file “./run.sh”
+- run the file `./run.sh`
 ## Outcome
 - use the provided IP to access the application
