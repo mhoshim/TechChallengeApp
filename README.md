@@ -12,6 +12,11 @@
 `$gcloud auth application-default login`
 ## Configure ‘kubectl’ (macOS)
 `$brew install kubernetes-cli`
+
+## Install terraform (macOS)
+`$brew tap hashicorp/tap`
+`$brew install hashicorp/tap/terraform`
+
 ## Build Kubernetes Cluster on GCP
 - find your GCP project id using the following command
   
