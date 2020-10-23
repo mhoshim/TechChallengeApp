@@ -19,6 +19,8 @@
 `$brew install hashicorp/tap/terraform`
 
 ## Folder structure
+
+``` sh
 ── servian
     ├── postgres-config.yaml
     ├── postgres-deployment.yaml
@@ -36,6 +38,7 @@
         ├── terraform.tfvars
         ├── versions.tf
         └── vpc.tf
+```
         
 ## Build Kubernetes Cluster on GCP
 - find your GCP project id using the following command
