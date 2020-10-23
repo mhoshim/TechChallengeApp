@@ -6,7 +6,9 @@
 - kubectl
 ## Configure gcloud SDK (macOS)
 `$brew cask install google-cloud-sdk`
+
 `$gcloud init`
+
 `$gcloud auth application-default login`
 ## Configure ‘kubectl’ (macOS)
 `$brew install kubernetes-cli`
