@@ -11,7 +11,7 @@
 ## Configure ‘kubectl’ (macOS)
 `$brew install kubernetes-cli`
 ## Build Kubernetes Cluster on GCP
-- find your GCP project id using the following command
+- find your GCP project id using the command
   `$gcloud config get-value project`
 - run the file `./k8s.sh project_id region` #example: ./k8s.sh nonamed-utility-1234 asia-southeast1
 ## Start Deployment
