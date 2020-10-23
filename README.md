@@ -15,8 +15,28 @@
 
 ## Install terraform (macOS)
 `$brew tap hashicorp/tap`
+
 `$brew install hashicorp/tap/terraform`
 
+## Folder structure
+── servian
+    ├── postgres-config.yaml
+    ├── postgres-deployment.yaml
+    ├── postgres-service.yaml
+    ├── postgres-storage.yaml
+    ├── run.sh                        #atomation script to create pods and run go app
+    ├── servian-config.yaml
+    ├── servian-deployment.yaml
+    ├── servian-service.yaml
+    ├── servian-updatedb.yaml
+    └── terraform
+        ├── gke.tf
+        ├── k8s.sh                    #automation script to build kubernetes cluster on GKE
+        ├── terraform.tfstate
+        ├── terraform.tfvars
+        ├── versions.tf
+        └── vpc.tf
+        
 ## Build Kubernetes Cluster on GCP
 - find your GCP project id using the following command
   
