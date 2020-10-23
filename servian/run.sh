@@ -19,6 +19,7 @@ kubectl apply -f postgres-service.yaml
 
 #provision database for go app
 kubectl apply -f servian-updatedb.yaml
+sleep 15
 kubectl delete -f servian-updatedb.yaml
 
 #deploy go app and load balancer
@@ -27,8 +28,8 @@ kubectl apply -f servian-service.yaml
 
 
 #get the external IP of the LB
-echo "Please wait while retrieving LBs IP"
-sleep 30
+echo "Please wait while retrieving LB's IP"
+sleep 60
 lb_ip=$(kubectl describe services servian|grep "LoadBalancer Ingress"| awk '{print $3}')
 
 
@@ -38,4 +39,4 @@ echo Use this IP $lb_ip to access the site
 
 #enable horizontal pod autoscaling
 echo "#####################################"
-kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10
+kubectl autoscale deployment servian --cpu-percent=50 --min=1 --max=10

@@ -6,7 +6,7 @@ metadata:
     app: servian-updatedb
 spec:
   containers:
-  - image: asia.gcr.io/nomadic-utility-292301/techchallengeapp:v3
+  - image: servian/techchallengeapp:latest
     name: servian-updatedb
     args: ['updatedb']
     volumeMounts:
